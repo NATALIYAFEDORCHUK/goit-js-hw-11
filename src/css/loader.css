@@ -1,0 +1,41 @@
+#global-loader {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+#global-loader.is-active {
+  display: flex;
+}
+
+.loader {
+  display: flex;
+  gap: 10px;
+}
+.loader div {
+  width: 16px;
+  height: 16px;
+  background-color: #ff7a00;
+  border-radius: 50%;
+  animation: pulse 1.4s infinite ease-in-out both;
+}
+
+.loader div:nth-child(4) {
+  animation-delay: 0.2s;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(0.5);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
